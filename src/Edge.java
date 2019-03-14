@@ -8,8 +8,8 @@ class Edge {
     Vertex b;
 
     Edge(Vertex a, Vertex b) {
-        this.a = a;
-        this.b = b;
+        this.a = new Vertex(a);
+        this.b = new Vertex(b);
     }
 
     Edge(Edge toCopy) {
