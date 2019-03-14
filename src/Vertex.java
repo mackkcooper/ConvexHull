@@ -16,6 +16,7 @@ class Vertex implements Comparable<Vertex> {
     Vertex(Vertex toCopy) {
         x = toCopy.x;
         y = toCopy.y;
+        polarAngle = toCopy.polarAngle;
     }
 
     @Override
