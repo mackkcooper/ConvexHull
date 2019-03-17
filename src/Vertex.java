@@ -3,25 +3,28 @@ Author: MacKenzie K. Cooper
 Github: mackkcooper
 */
 
-class Vertex implements Comparable<Vertex> {
-    long x = 0;
-    long y = 0;
-    double polarAngle = 0;
+import java.util.Vector;
 
-    Vertex(long x, long y) {
+class Vertex implements Comparable<Vertex> {
+    double x;
+    double y;
+    double sortParam;
+
+    Vertex(double x, double y) {
         this.x = x;
         this.y = y;
+        sortParam = 0;
     }
 
     Vertex(Vertex toCopy) {
         x = toCopy.x;
         y = toCopy.y;
-        polarAngle = toCopy.polarAngle;
+        sortParam = toCopy.sortParam;
     }
 
     @Override
     public int compareTo(Vertex o) {
-        return Double.compare(polarAngle,o.polarAngle);
+        return Double.compare(sortParam,o.sortParam);
     }
 
     void display() {
@@ -30,5 +33,13 @@ class Vertex implements Comparable<Vertex> {
 
     boolean equals(Vertex v) {
         return (x == v.x && y == v.y);
+    }
+
+    static Vector<Vertex> copyVector(Vector<Vertex> toCopy) {
+        Vector<Vertex> temp = new Vector<>();
+        for (Vertex v : toCopy) {
+            temp.add(new Vertex(v));
+        }
+        return temp;
     }
 }
