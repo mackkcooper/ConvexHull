@@ -145,5 +145,4 @@ abstract class ConvexHull {
         return vertices;
     }
 
-
 }
