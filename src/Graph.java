@@ -3,16 +3,18 @@ Author: MacKenzie K. Cooper
 Github: mackkcooper
 */
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Vector;
 
 class Graph {
     Vector<Vertex> vertices = null;
     Vector<Vertex> hullVertices = null;
     Vector<Edge> edges = null;
-
+    long solveTime = -1; //in milliseconds
 
     Graph() {}
 
@@ -20,25 +22,30 @@ class Graph {
         generate(size,range);
     }
 
+    Graph(String fileName) {
+        load(fileName);
+    }
+
     Graph(Graph toCopy) {
         if(toCopy.vertices != null) {
-            vertices = new Vector<>(100);
+            vertices = new Vector<>();
             for (Vertex v : toCopy.vertices)
                 addVertex(v);
         }
         if(toCopy.hullVertices != null) {
-            hullVertices = new Vector<>(100);
+            hullVertices = new Vector<>();
             for (Vertex v : toCopy.hullVertices)
                 addHullVertex(v);
         }
         if(toCopy.edges != null) {
-            hullVertices = new Vector<>(100);
+            edges = new Vector<>();
             for (Edge e : toCopy.edges)
                 addEdge(e);
         }
+        solveTime = 0;
     }
 
-    void addVertex(Vertex v) {
+    private void addVertex(Vertex v) {
         vertices.add(new Vertex(v));
     }
 
@@ -46,7 +53,7 @@ class Graph {
         hullVertices.add(new Vertex(v));
     }
 
-    void addEdge(Edge e) {
+    private void addEdge(Edge e) {
         edges.add(new Edge(e));
     }
 
@@ -78,13 +85,36 @@ class Graph {
         }
     }
 
+    void displayShape() {
+        if(vertices != null)
+            System.out.print(vertices.size());
+        else
+            System.out.print(0);
+        System.out.print(" v, ");
+        if(hullVertices != null)
+            System.out.print(hullVertices.size());
+        else
+            System.out.print(0);
+        System.out.print(" hv, ");
+        if(edges != null)
+            System.out.print(edges.size());
+        else
+            System.out.print(0);
+        System.out.print(" e\n");
+    }
+
     void save(String verticesFileName, String edgesFileName) {
         FileWriter out;
+        int size;
         try {
             if(vertices != null) {
                 out = new FileWriter(verticesFileName,false);
-                for (Vertex v : vertices)
-                    out.write(v.x + "," + v.y + "\n");
+                size = vertices.size();
+                for (Vertex v : vertices) {
+                    out.write(v.x + "," + v.y);
+                    if (v != vertices.get(size-1))
+                        out.write("\n");
+                }
                 out.close();
             }
         } catch (IOException e) {
@@ -93,25 +123,42 @@ class Graph {
         try {
             if(edges != null) {
                 out = new FileWriter(edgesFileName,false);
-                for (Edge e : edges)
-                    out.write(e.a.x + "," + e.a.y + "," + e.b.x + "," + e.b.y + "\n");
+                size = edges.size();
+                for (Edge e : edges) {
+                    out.write(e.a.x + "," + e.a.y + "," + e.b.x + "," + e.b.y);
+                    if(e != edges.get(size-1))
+                        out.write("\n");
+                }
                 out.close();
             }
         } catch (IOException e) {
-            System.out.println(e.toString());
+            e.printStackTrace();
         }
     }
 
-    boolean verify() {
-        if(hullVertices == null || hullVertices.size() < 3) return false;
-        if(edges == null || edges.size() < 3) return false;
-        //verify closed polygon
-        int size = edges.size();
-        if(!edges.get(0).a.equals(edges.get(size-1).b)) return false;
-        for(int i = 1; i < size; ++i) {
-            if(!edges.get(i).a.equals(edges.get(i-1).b)) return false;
+    private void load(String fileName) {
+        Vector<Vertex> input;
+        String [] line;
+        try {
+            Scanner scanner = new Scanner(new File(fileName));
+            input = new Vector<>(100);
+            int a;
+            int b;
+            while (scanner.hasNext()) {
+                line = scanner.nextLine().split(",");
+                if(line.length > 1) {
+                    a = Integer.parseInt(line[0]);
+                    b = Integer.parseInt(line[1]);
+                    input.add(new Vertex(a,b));
+                }
+            }
+            scanner.close();
+            vertices = input;
+            hullVertices = null;
+            edges = null;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        //verify
-        return true;
     }
+
 }
