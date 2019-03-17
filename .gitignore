@@ -1,4 +1,5 @@
 out
 *.iml
 *.idea
-*.csv
+vertices.csv
+edges.csv
