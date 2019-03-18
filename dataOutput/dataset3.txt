@@ -1,0 +1,244 @@
+Dataset 3
+
+INPUT SIZE: 1000
+#########################
+Minimum Hull Case
+Iteration 1
+Graham: 8 , Jarvis: 0
+Iteration 2
+Graham: 3 , Jarvis: 0
+Iteration 3
+Graham: 2 , Jarvis: 0
+Iteration 4
+Graham: 2 , Jarvis: 0
+Iteration 5
+Graham: 1 , Jarvis: 0
+Avg Graham: 3.2 , Avg Jarvis: 0.0
+#########################
+0.0 Hull Case
+Iteration 1
+Graham: 2 , Jarvis: 2
+Iteration 2
+Graham: 1 , Jarvis: 3
+Iteration 3
+Graham: 1 , Jarvis: 1
+Iteration 4
+Graham: 1 , Jarvis: 0
+Iteration 5
+Graham: 1 , Jarvis: 1
+Avg Graham: 1.2 , Avg Jarvis: 1.4
+#########################
+0.01 Hull Case
+Iteration 1
+Graham: 1 , Jarvis: 0
+Iteration 2
+Graham: 1 , Jarvis: 1
+Iteration 3
+Graham: 1 , Jarvis: 0
+Iteration 4
+Graham: 3 , Jarvis: 1
+Iteration 5
+Graham: 2 , Jarvis: 1
+Avg Graham: 1.6 , Avg Jarvis: 0.6
+#########################
+0.02 Hull Case
+Iteration 1
+Graham: 1 , Jarvis: 0
+Iteration 2
+Graham: 2 , Jarvis: 1
+Iteration 3
+Graham: 11 , Jarvis: 1
+Iteration 4
+Graham: 2 , Jarvis: 1
+Iteration 5
+Graham: 1 , Jarvis: 1
+Avg Graham: 3.4 , Avg Jarvis: 0.8
+#########################
+0.03 Hull Case
+Iteration 1
+Graham: 1 , Jarvis: 1
+Iteration 2
+Graham: 1 , Jarvis: 1
+Iteration 3
+Graham: 1 , Jarvis: 0
+Iteration 4
+Graham: 1 , Jarvis: 1
+Iteration 5
+Graham: 3 , Jarvis: 1
+Avg Graham: 1.4 , Avg Jarvis: 0.8
+#########################
+0.04 Hull Case
+Iteration 1
+Graham: 2 , Jarvis: 1
+Iteration 2
+Graham: 1 , Jarvis: 1
+Iteration 3
+Graham: 4 , Jarvis: 6
+Iteration 4
+Graham: 1 , Jarvis: 1
+Iteration 5
+Graham: 1 , Jarvis: 0
+Avg Graham: 1.8 , Avg Jarvis: 1.8
+#########################
+
+INPUT SIZE: 10000
+#########################
+Minimum Hull Case
+Iteration 1
+Graham: 18 , Jarvis: 1
+Iteration 2
+Graham: 24 , Jarvis: 1
+Iteration 3
+Graham: 20 , Jarvis: 1
+Iteration 4
+Graham: 16 , Jarvis: 1
+Iteration 5
+Graham: 9 , Jarvis: 1
+Avg Graham: 17.4 , Avg Jarvis: 1.0
+#########################
+0.0 Hull Case
+Iteration 1
+Graham: 24 , Jarvis: 3
+Iteration 2
+Graham: 21 , Jarvis: 2
+Iteration 3
+Graham: 10 , Jarvis: 5
+Iteration 4
+Graham: 11 , Jarvis: 5
+Iteration 5
+Graham: 16 , Jarvis: 3
+Avg Graham: 16.4 , Avg Jarvis: 3.6
+#########################
+0.01 Hull Case
+Iteration 1
+Graham: 12 , Jarvis: 12
+Iteration 2
+Graham: 14 , Jarvis: 7
+Iteration 3
+Graham: 8 , Jarvis: 12
+Iteration 4
+Graham: 12 , Jarvis: 11
+Iteration 5
+Graham: 8 , Jarvis: 9
+Avg Graham: 10.8 , Avg Jarvis: 10.2
+#########################
+0.02 Hull Case
+Iteration 1
+Graham: 9 , Jarvis: 19
+Iteration 2
+Graham: 9 , Jarvis: 20
+Iteration 3
+Graham: 6 , Jarvis: 17
+Iteration 4
+Graham: 5 , Jarvis: 16
+Iteration 5
+Graham: 6 , Jarvis: 19
+Avg Graham: 7.0 , Avg Jarvis: 18.2
+#########################
+0.03 Hull Case
+Iteration 1
+Graham: 7 , Jarvis: 24
+Iteration 2
+Graham: 5 , Jarvis: 40
+Iteration 3
+Graham: 16 , Jarvis: 15
+Iteration 4
+Graham: 4 , Jarvis: 22
+Iteration 5
+Graham: 4 , Jarvis: 19
+Avg Graham: 7.2 , Avg Jarvis: 24.0
+#########################
+0.04 Hull Case
+Iteration 1
+Graham: 5 , Jarvis: 23
+Iteration 2
+Graham: 9 , Jarvis: 48
+Iteration 3
+Graham: 9 , Jarvis: 31
+Iteration 4
+Graham: 7 , Jarvis: 46
+Iteration 5
+Graham: 5 , Jarvis: 38
+Avg Graham: 7.0 , Avg Jarvis: 37.2
+#########################
+
+INPUT SIZE: 100000
+#########################
+Minimum Hull Case
+Iteration 1
+Graham: 79 , Jarvis: 10
+Iteration 2
+Graham: 70 , Jarvis: 48
+Iteration 3
+Graham: 93 , Jarvis: 5
+Iteration 4
+Graham: 48 , Jarvis: 6
+Iteration 5
+Graham: 95 , Jarvis: 7
+Avg Graham: 77.0 , Avg Jarvis: 15.2
+#########################
+0.0 Hull Case
+Iteration 1
+Graham: 50 , Jarvis: 63
+Iteration 2
+Graham: 46 , Jarvis: 33
+Iteration 3
+Graham: 72 , Jarvis: 26
+Iteration 4
+Graham: 45 , Jarvis: 35
+Iteration 5
+Graham: 39 , Jarvis: 30
+Avg Graham: 50.4 , Avg Jarvis: 37.4
+#########################
+0.01 Hull Case
+Iteration 1
+Graham: 58 , Jarvis: 433
+Iteration 2
+Graham: 48 , Jarvis: 423
+Iteration 3
+Graham: 40 , Jarvis: 432
+Iteration 4
+Graham: 82 , Jarvis: 429
+Iteration 5
+Graham: 35 , Jarvis: 423
+Avg Graham: 52.6 , Avg Jarvis: 428.0
+#########################
+0.02 Hull Case
+Iteration 1
+Graham: 38 , Jarvis: 830
+Iteration 2
+Graham: 36 , Jarvis: 852
+Iteration 3
+Graham: 155 , Jarvis: 946
+Iteration 4
+Graham: 50 , Jarvis: 961
+Iteration 5
+Graham: 53 , Jarvis: 988
+Avg Graham: 66.4 , Avg Jarvis: 915.4
+#########################
+0.03 Hull Case
+Iteration 1
+Graham: 46 , Jarvis: 2019
+Iteration 2
+Graham: 50 , Jarvis: 1706
+Iteration 3
+Graham: 51 , Jarvis: 1770
+Iteration 4
+Graham: 37 , Jarvis: 1355
+Iteration 5
+Graham: 41 , Jarvis: 1286
+Avg Graham: 45.0 , Avg Jarvis: 1627.2
+#########################
+0.04 Hull Case
+Iteration 1
+Graham: 43 , Jarvis: 1681
+Iteration 2
+Graham: 36 , Jarvis: 1693
+Iteration 3
+Graham: 127 , Jarvis: 1795
+Iteration 4
+Graham: 39 , Jarvis: 1763
+Iteration 5
+Graham: 43 , Jarvis: 1736
+Avg Graham: 57.6 , Avg Jarvis: 1733.6
+#########################
