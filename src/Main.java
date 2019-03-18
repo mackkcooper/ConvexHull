@@ -34,6 +34,7 @@ class Main {
             txtout = new FileWriter("dataOutput/dataset3.txt",false);
             csvout = new FileWriter("dataOutput/dataset3.csv",false);
             txtout.write("Dataset 3\n");
+            csvout.write("Algorithm , InputSize , HullPercent , AvgSolveTime\n");
             for (int n : sizes) {
                 txtout.write("\nINPUT SIZE: " + n + "\n");
                 txtout.write("#########################\n");
